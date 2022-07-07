@@ -1,17 +1,17 @@
-import sys
 from translate import Translator
 
+
+
+# translator=Translator(from_lang='PL',to_lang='EN')
+# trans=translator.translate("Pracuję bardzo ciężko od poniedziałku do piątku, natomiast w weekendy odpoczywam.")
+# print(trans)
+
+
+
 while True:
-    b = int(input('''
-    WYBIERZ 0 ABY KONTYNUOWAĆ
-    WYBIERZ 1 ABY PRZERWAĆ
-    PODAJ DZIAŁANIE -->:  '''))
-    if b == 1:
-        c= input('PLEASE CHOOSE LANGUGE WHICH SYS WILL TRANSLATE FROM: ')
-        d= input('PLEASE CHOOSE LANGUGE  WHICH SYS WILL TRNASLATE FOR: ')
-        e= input('PLEASE PROVIDE TEXT: ')
-        translator = Translator(from_lang=c, to_lang=d)
-        trans = translator.translate(e)
-        print(trans.upper())
-    if b == 0:
-        sys.exit()
+    c=input('PODAJ JĘZYK WEJŚCIA(PL,DE,EN,RUS,FR: --> ')
+    d=input('PODAJ JĘZYK WYJŚCIA(PL,DE,EN,RUS,FR:--> ')
+    e=input('Podaj tekst do tłumaczenia:--> ')
+    translator=Translator(from_lang=c,to_lang=d)
+    trans=translator.translate(e)
+    print(trans)
